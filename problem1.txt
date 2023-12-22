@@ -1,0 +1,8 @@
+:: Microservice Architecture Design in a NodeJS/NestJS Environment:
+
+Answer of Scenario 1 : 
+I would like to adopt the microservices architecture for the online retail system. Firstly, the online retail system will be decomposed into a collection of small, independent, and loosely coupled services, such as the product service, user service, order service, and payment service. Each service will have its own dedicated database. MongoDB will be employed for the product service due to its flexibility in storing product data. As for the user and payment services, a relational database like PostgreSQL will be chosen. PostgreSQL ensures secure data storage and facilitates easy relationship establishment with other tables.
+
+The payment service will also utilize a relational database like PostgreSQL to guarantee strong ACID compliance and data integrity. This choice ensures the reliable and secure handling of critical payment transactions. Communication between microservices will occur through RESTful APIs or message queues such as RabbitMQ or Kafka. Database-level transactions will be implemented to maintain data consistency.
+
+To ensure secure communication, HTTPS and authentication mechanisms will be employed to protect sensitive data. NestJS's built-in features for dependency injection and module encapsulation will be utilized to enhance reliability. For services requiring automatic completion, Cron jobs will be employed.

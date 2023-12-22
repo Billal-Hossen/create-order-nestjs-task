@@ -1,0 +1,10 @@
+:: Optimizing and Scaling a NestJS Application:
+
+Answer of Scenario 3 : 
+For high-traffic scenarios, I prefer utilizing a robust, horizontally scalable database like MongoDB due to its flexibility and capacity to handle large volumes of data. Additionally, I believe that in our application, where read and write processes are prevalent, MongoDB is optimal for read-intensive operations, while a SQL database is better suited for write processes.
+
+To manage high concurrency and load, I will incorporate Redis or in-memory caching to alleviate the database load for frequently accessed data. NGINX or deployment on cloud platforms offering automatic load balancing will be employed to distribute incoming requests across multiple servers.
+
+As part of optimization techniques for NestJS, I will select a performant database, employ caching for frequent queries, and utilize efficient middleware, guards, request/response validation, DTOs, and validation processes to streamline request processing. This approach ensures high performance and responsiveness.
+
+In terms of cloud services, I prefer using AWS, Azure, or Google Cloud Platform for their scalability and flexibility. I will dockerize my application to facilitate running it across different environments. Implementation of CI/CD pipelines for automated testing, continuous integration, and deployment is part of the plan. Additionally, I will use the NestJS Swagger plugin to automatically generate API documentation.
