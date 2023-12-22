@@ -11,7 +11,35 @@ class Product {
   quantity: number;
 }
 
+class BillingAddress {
+  @IsString()
+  @IsNotEmpty()
+  street: string;
+
+  @IsString()
+  @IsNotEmpty()
+  city: string;
+
+  @IsString()
+  @IsNotEmpty()
+  state: string;
+
+  @IsString()
+  @IsNotEmpty()
+  postalCode: string;
+
+  @IsString()
+  @IsNotEmpty()
+  country: string
+}
+
+
+
 class PaymentInfo {
+  @IsString()
+  @IsNotEmpty()
+  method: string;
+
   @IsString()
   @IsNotEmpty()
   cardNumber: string;
@@ -27,6 +55,12 @@ class PaymentInfo {
   @IsNumber()
   @IsNotEmpty()
   cvv: number;
+
+  @IsObject()
+  @IsNotEmpty()
+  @ValidateNested()
+  @Type(() => BillingAddress)
+  billingAddress: BillingAddress;
 }
 
 export class CreateOrderDto {
