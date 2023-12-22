@@ -24,12 +24,28 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+1. The answer for Scenario 1 is in the problem1.txt file.
+2. The solution for the coding problem is in the app module and order module.
+3. The answer for Scenario 2 is in the problem3.txt file.
+
 
 ## Installation
 
 ```bash
+Clone the repo: https://github.com/Billal-Hossen/create-order-nestjs-task.git
+Add .env like the env sample file
 $ npm install
+
+```
+
+## Add .env
+
+```bash
+
+PORT =
+NODE_ENV =
+MONGODB_CONNECTION_STRING =
+
 ```
 
 ## Running the app
@@ -41,33 +57,28 @@ $ npm run start
 # watch mode
 $ npm run start:dev
 
-# production mode
-$ npm run start:prod
 ```
 
-## Test
+## Sample create Order data
 
 ```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+{
+  "userId": "6580b18f11bf8a2c978fad6c",
+  "productDetails":[{ "productId": "65843cf30f681ce4c102ef77", "quantity": 2}, { "productId": "65843bf30f681ce4c102ef77", "quantity": 2}],
+  "paymentInfo": {
+      "method" : "PayPal",
+    "cardNumber": "**** **** **** 1234",
+    "cardHolderName": "John Doe",
+    "expirationDate": "12/23",
+    "cvv": 123,
+       "billingAddress": {
+    "street": "123 Main Street",
+    "city": "Dhaka",
+    "state": "Stateville",
+    "postalCode": "12345",
+    "country": "Bangladesh"
+  }
+  }
+}
 ```
 
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
